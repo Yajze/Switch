@@ -14,3 +14,17 @@ default:
 window.document.write('Nacisnąłeś OK, wpisałeś odp = '+ odp + '<br>');
 break;
 }
+
+
+
+<!DOCTYPE html> <!-- Znacznik <!DOCTYPE html> określa typ używanego dokumentu, w tym przypadku jest to html -->
+<html lang='pl'> <!-- Znacznik html o atrybucie lang pozwala wyświetlać stronę w różnych językach, w tym przypadku w języku polskim -->
+<head> <!-- W tym znaczniku znajdują się ustawienia strony -->
+<meta charset="UTF-8"> <!-- Znacznik określa kodowanie strony, w tym przypadku będziemy używać zestawu znaków UTF-8 -->
+<title>Tytuł strony</title> <!-- Znacznik title jest tytułem strony. Najczęściej można go zobaczyć w dwóch miejscach wyniki wyszukiwania i nazwa karty w przeglądrace  -->
+<style> <!-- Znacznik style przeznaczony jest do formatowania treści strony. -->
+</style>
+</head>
+<body> <!--W tym znaczniku znajdują się informacje, które chcielibyśmy umieścić na stronie. --> 
+</body>
+</html> 
