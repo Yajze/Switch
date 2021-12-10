@@ -1,0 +1,16 @@
+switch(odp){
+case null:
+window.document.write('Nacisnąłeś Anuluj, odp = '+ odp +'<br>');
+break;
+
+case'':
+window.document.write('Nic nie napisałeś i nacisnąłeś OK odp = '+ odp + '<br>');
+break;
+
+case'pies':
+window.document.write('Wpisałeś pies');
+break;
+default:
+window.document.write('Nacisnąłeś OK, wpisałeś odp = '+ odp + '<br>');
+break;
+}
