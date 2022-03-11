@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang='pl'>
+<head>
+<meta charset="UTF-8">
+<title>2_1 Okno dialogowe alert</title>
+</head>
+<body>
+<h1>Metoda window.confirm</h1>
+<p class='p_omowienie'>
+Wywołanie metody confirm ma postać<br>
+window.confirm('tu wpisz powiadomienia dla użtkownika).<br>
+Pytanie dla użytkownika można łamać na linie za pomocą sekwencji:\n.
+Nie wstawiaj spacji przed i po \n.
+Wywołanie metody wyświetlania okno w którym jest wypisanie pytanie do
+użytkownika.
+<br>
+W oknie są wyświetlane 2 przyciski OK i Anuluj. W zależności od klikniętego
+przycisku metoda zwraca: wartość false (gdy kliknąłeś Anuluj), wartość true (gdy kliknąłeś OK.)<br>
+Zazwyczaj wywołanie tej metody przypisujemy do zmiennej.
+</p>
+<p class='p_omowienie'>
+Użycie instrukcji warunkowej if 
+</p>
+<script>
+'use strict'
+let odp = window.confirm('Mam na imię Kuba')
+window.document.write(odp)
+if(odp==true){
+window.document.write(' Nacisnąłeś OK')
+}else{
+window.document.write(' Nacisnąłeś Anuluj')
+}
+</script>
+<p class='p_omowienie'>
+Użycie instrukcji wyboru switch 
+</p>
+<script>
+'use strict'
+switch (odp) {
+    case true:
+        window.document.write('Nacisnąłeś OK')
+	break;
+    case false:
+        window.document.write('Nacisnąłeś Anuluj')
+	break;
+}
+</script>
+</body>
+</html>
+
+
