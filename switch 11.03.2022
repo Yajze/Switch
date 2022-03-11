@@ -1,11 +1,57 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang='pl'>
 <head>
 <meta charset="UTF-8">
 <title>2_1 Okno dialogowe alert</title>
+<style>
+.div_temat{
+	background-color: #1f1f1f;
+	border: 4px, solid gray;
+	margin-left: 1cm;
+	margin-right: 1cm;
+	padding: 10px;
+}
+p{
+	background-color: silver;
+	padding: 10px;
+	color: black;
+	line-height: 1.4em;
+	margin-left: 1cm;
+	margin-right: 1cm;
+	padding 10px;
+}
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'verdana', sans-serif;
+	background-color: #000000;
+	color: #d0eb6a;
+	font-size: 14px;
+	margin-left: 1cm;
+	margin-right: 1cm;
+}
+h1, h2{
+	text-align: center;
+	background-image: linear-gradient(to right, gray, black, gray); 
+	color: white;
+	margin-left: 1cm;
+	margin-right: 1cm;
+}
+.pre_wynik{
+	border-radius: 50px;
+	margin-left: 1cm;
+	margin-right: 1cm;
+	background-color: #333;
+	border: 2px dotted lightgreen;
+	padding: 20px;
+	white-space: pre-line;
+	line-hight: 1.4em;
+}
+</style>
 </head>
 <body>
 <h1>Metoda window.confirm</h1>
+<div class='div_temat'>
 <p class='p_omowienie'>
 Wywołanie metody confirm ma postać<br>
 window.confirm('tu wpisz powiadomienia dla użtkownika).<br>
@@ -16,36 +62,43 @@ użytkownika.
 <br>
 W oknie są wyświetlane 2 przyciski OK i Anuluj. W zależności od klikniętego
 przycisku metoda zwraca: wartość false (gdy kliknąłeś Anuluj), wartość true (gdy kliknąłeś OK.)<br>
-Zazwyczaj wywołanie tej metody przypisujemy do zmiennej.
+
 </p>
-<p class='p_omowienie'>
+<h2>
 Użycie instrukcji warunkowej if 
+</h2>
 </p>
+<pre class='pre_wynik'>
 <script>
-'use strict'
-let odp = window.confirm('Mam na imię Kuba')
-window.document.write(odp)
-if(odp==true){
-window.document.write(' Nacisnąłeś OK')
+'use strict';
+let odp = window.prompt('Jakie wartpści może zwrócić metoda window.prompt?','xyz');
+if(odp == null){
+	window.document.write('Nacisnąłeś Anuluj, odp = '+ odp +'<br>');	
 }else{
-window.document.write(' Nacisnąłeś Anuluj')
+	if(odp == ''){
+		window.document.write('Nic nie napisałeś i nacisnąłeś OK, odp = '+ odp +'<br>');
+}else{
+	window.document.write('Nacisnąłeś OK, wpisałeś odp = '+ odp +'<br>')
+	}
+}
+
+switch(odp){
+	case null:
+		window.document.write('Nacisnąłeś Anuluj, odp = '+ odp +'<br>');
+	break;
+	case'':
+		window.document.write('Nic nie napisałeś i nacisnąłeś OK odp = '+ odp + '<br>');
+		break;
+	case'pies':
+		window.document.write('Wpisałeś pies');
+	break;
+	default:
+		window.document.write('Nacisnąłeś OK, wpisałeś odp = '+ odp + '<br>');
+break;
 }
 </script>
-<p class='p_omowienie'>
-Użycie instrukcji wyboru switch 
-</p>
-<script>
-'use strict'
-switch (odp) {
-    case true:
-        window.document.write('Nacisnąłeś OK')
-	break;
-    case false:
-        window.document.write('Nacisnąłeś Anuluj')
-	break;
-}
-</script>
+</pre>
+
+</div>
 </body>
 </html>
-
-
